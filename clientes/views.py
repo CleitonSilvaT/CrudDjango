@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from django.db.models import Q
 from .models import Cliente
+from .forms import ClienteForm
 
 # Create your views here.
 
@@ -21,3 +22,14 @@ def listar_clientes(request):
     clientes = paginator.get_page(page)
     
     return render(request, 'clientes/listar_clientes.html', {'clientes':clientes})
+
+def adicionar_clientes(request):
+    form = ClienteForm(request.POST)
+
+    if form.is_valid():
+        obj = form.save()
+        obj.save()
+        form = ClienteForm()
+        return redirect('listar_clientes')
+
+    return render(request, 'clientes/adicionar_clientes.html', {'form':form})
