@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.core.paginator import Paginator
 from django.db.models import Q
 from .models import Cliente
@@ -33,3 +33,14 @@ def adicionar_clientes(request):
         return redirect('listar_clientes')
 
     return render(request, 'clientes/adicionar_clientes.html', {'form':form})
+
+def editar_clientes(request, id=None):
+    cliente = get_object_or_404(Cliente, id=id)
+    form = ClienteForm(request.POST or None, instance=cliente)
+
+    if form.is_valid():
+        obj = form.save()
+        obj.save()
+        return redirect('listar_clientes')
+
+    return render(request, 'clientes/editar_clientes.html', {'form':form})
