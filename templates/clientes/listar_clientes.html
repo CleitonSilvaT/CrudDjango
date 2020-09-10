@@ -22,8 +22,11 @@
                     <th>Email</th>
                     <th>CPF</th>                
                     <th>Data Criação</th>
-                    <th>Opções</th>
-                    <th></th>
+
+                    {% if user.is_authenticated %}
+                        <th>Opções</th>
+                        <th></th>
+                    {% endif %}
                 </tr>
             </thead>
             <tbody>
@@ -34,8 +37,10 @@
                         <td>{{ cliente.cpf }}</td>
                         <td>{{ cliente.data_criacao|date:"d/m/y" }}</td>
 
-                        <td><a href="/editar_clientes/{{ cliente.id }}" class="btn btn-warning">Editar</a></td>
-                        <td><a href="/excluir_clientes/{{ cliente.id }}" class="btn btn-danger">Excluir</a></td>
+                        {% if user.is_authenticated %}
+                            <td><a href="/editar_clientes/{{ cliente.id }}" class="btn btn-warning">Editar</a></td>
+                            <td><a href="/excluir_clientes/{{ cliente.id }}" class="btn btn-danger">Excluir</a></td>
+                        {% endif %}
                     </tr>
                 {% endfor %}
             </tbody>
