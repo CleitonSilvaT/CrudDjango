@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from django.core.paginator import Paginator
 from django.db.models import Q
 from .models import Cliente
@@ -30,6 +31,7 @@ def adicionar_clientes(request):
         obj = form.save()
         obj.save()
         form = ClienteForm()
+        messages.success(request, 'Cliente adicionado com sucesso')
         return redirect('listar_clientes')
 
     return render(request, 'clientes/adicionar_clientes.html', {'form':form})
@@ -41,6 +43,7 @@ def editar_clientes(request, id=None):
     if form.is_valid():
         obj = form.save()
         obj.save()
+        messages.info(request, 'Cliente editado com sucesso')
         return redirect('listar_clientes')
 
     return render(request, 'clientes/editar_clientes.html', {'form':form})
@@ -50,6 +53,7 @@ def excluir_clientes(request, id=None):
 
     if request.method == 'POST':
         cliente.delete()
+        messages.warning(request, 'Cliente removido com sucesso')
         return redirect('listar_clientes')
 
     return render(request, 'clientes/excluir_clientes.html', {'cliente':cliente})
