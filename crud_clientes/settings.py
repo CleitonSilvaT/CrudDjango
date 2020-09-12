@@ -27,7 +27,7 @@ SECRET_KEY = 'lvdm6^-1)y8c%84gi)5ks+4ww48fuwm)czwnywsrn3(w8^#zso'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['crud-clientes-django.heroku.app']
 
 
 # Application definition
