@@ -53,6 +53,12 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
+* Rode o servidor django
+
+```
+python manage.py runserver
+```
+
 
 ## Configuração do Projeto
 
