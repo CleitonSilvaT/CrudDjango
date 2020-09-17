@@ -8,6 +8,8 @@ Outros pontos do projeto:
 * Uso de Busca
 
 
+![Aplicação](img/Tela.png)
+
 
 ## Rodando o Projeto
 
