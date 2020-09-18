@@ -8,10 +8,7 @@ Outros pontos do projeto:
 * Uso de Busca
 
 
-![Aplicação](img/Tela.png)
-
-
-## Rodando o Projeto
+## Rodando o Projeto Localmente
 
 * Clone o repositório
 
@@ -68,12 +65,14 @@ Este projeto contém duas branches principais
 
 * master
 
-Contém o projeto integrado ao Heroku
+Contém o projeto integrado ao Heroku (em construção)
 
 
 * local
 
-Contém o projeto para uso local
+Contém o projeto para uso local (finalizado)
+
+![Aplicação](img/Tela.png)
 
 
 ## Principais Tecnologias
