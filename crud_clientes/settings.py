@@ -27,7 +27,7 @@ SECRET_KEY = 'lvdm6^-1)y8c%84gi)5ks+4ww48fuwm)czwnywsrn3(w8^#zso'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['crud-clientes-django.herokuapp.com']
+ALLOWED_HOSTS = ['crud-clientes-django.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -79,8 +79,14 @@ WSGI_APPLICATION = 'crud_clientes.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'crud-django',
+        'USER': 'admin',
+        'PASSWORD': 'admin',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
