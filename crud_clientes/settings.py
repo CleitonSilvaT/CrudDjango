@@ -82,10 +82,10 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'crud-django',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
-        'HOST': '127.0.0.1',
+        'NAME': 'dcrlhlrbcqp48c',
+        'USER': 'afylbuciwbxchy',
+        'PASSWORD': 'f517a440e674d227297de7fe7642397e4d622972a313e8937fe79356a769be44',
+        'HOST': 'ec2-54-144-177-189.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
