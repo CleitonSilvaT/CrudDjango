@@ -72,7 +72,7 @@ Link para Acesso: https://crud-clientes-django.herokuapp.com/
 
 Usuário: admin      Senha: admin
 
-![Aplicação](img/Tela.png)
+![Aplicação](img/TelaHeroku.png)
 
 * local
 
