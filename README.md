@@ -4,8 +4,9 @@ Este projeto apresenta Crud de Clientes Django.
 
 Outros pontos do projeto:
 
-* Uso de paginação
+* Uso de Paginação
 * Uso de Busca
+* Controle de Acesso pelo Admin
 
 
 ## Rodando o Projeto Localmente
@@ -65,14 +66,17 @@ Este projeto contém duas branches principais
 
 * master
 
-Contém o projeto integrado ao Heroku (em construção)
+Contém o projeto integrado ao Heroku (finalizado)
 
+Link para Acesso: https://crud-clientes-django.herokuapp.com/
+
+Usuário: admin      Senha: admin
+
+![Aplicação](img/Tela.png)
 
 * local
 
 Contém o projeto para uso local (finalizado)
-
-![Aplicação](img/Tela.png)
 
 
 ## Principais Tecnologias
@@ -84,3 +88,4 @@ Este projeto foi construído utilizando:
 * Bootstrap 4
 * JQuery 3.5.1
 * Popper
+* PostgreSQL
